@@ -1,17 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Horror Movie or Song Title?</title>
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+  <script src = "../static/main.js"></script>
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
-    <h1>{{title}}</h1>
-    <div id = "buttons">
-    <button>
-    	Song
-    </button>
-    <button>
-    	Movie
-    </button>
+<div class = "container" id ="main">
+	<h1 class = "text-center" id = "title_text">Horror Movie or Song?</br>
+<small>Click on the button for which you thing the following title is:</small></h1>
+
+<div class = "row">
+<div class="panel panel-default">
+<div class="panel-heading">
+    <h3 class="panel-title">Song or Movie Title</h3>
+  </div>
+  <div class="panel-body">
+    <h3 class = "text-center">{{title}} ?</h2>
+  </div>
+</div>
     </div>
+
+    <div class = "row" id = "buttons">
+   	<div class = "col-md-4 col-md-offset-5">
+    {% if type == 'song' %}
+    	<button class = "btn btn-primary btn-lg" onclick="correct()" name="song" value="song">Song</button>
+    	<button class = "btn btn-primary btn-lg"onclick="wrong()" name="movie" value="movie">Movie</button>
+    {% else %}
+    	<button class = "btn btn-primary btn-lg" onclick="wrong()" name="song" value="song">Song</button>
+    	<button class = "btn btn-primary btn-lg" onclick="correct()" name="movie" value="movie">Movie</button>
+    {% endif %}
+    </div>
+    </div>
+
+	<div class = "col-md-10 col-md-offset-1">
+    <div class = "alert alert-success"id = "success" style = "display:none">
+    <h2 class = "text-center">Correct!!</h2>
+    <strong>{{desc}}</strong>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{url}}" frameborder="0" allowfullscreen></iframe>
+    </br>
+  <a href="."><button class="btn btn-success">Next Question</button></a>
+     </div>
+
+    <div class = "alert alert-danger" id = "failure" hidden = "display:none">
+    <h2 class = "text-center">Wrong!</h2>
+     <strong>{{desc}}</strong>
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/{{url}}"  frameborder="0" allowfullscreen></iframe>
+     </br>
+    <a href="."><button class="btn btn-success" >Next Question</button></a>
+    </div>
+    </div>
+
+
 </body>
 </html>
