@@ -47,21 +47,14 @@
     </div>
 
 	<div class = "col-md-10 col-md-offset-1">
-    <div class = "alert alert-success"id = "success" style = "display:none">
-    <h2 class = "text-center">Correct!!</h2>
+    <div class = "alert" id = "result" style = "display:none">
+    <h2 id = "result_text" class = "text-center"></h2>
     <strong>{{desc}}</strong>
+    </br>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/{{url}}" frameborder="0" allowfullscreen></iframe>
     </br>
   <a href="."><button class="btn btn-success">Next Question</button></a>
      </div>
-
-    <div class = "alert alert-danger" id = "failure" hidden = "display:none">
-    <h2 class = "text-center">Wrong!</h2>
-     <strong>{{desc}}</strong>
-     <iframe width="560" height="315" src="https://www.youtube.com/embed/{{url}}"  frameborder="0" allowfullscreen></iframe>
-     </br>
-    <a href="."><button class="btn btn-success" >Next Question</button></a>
-    </div>
     </div>
 
 

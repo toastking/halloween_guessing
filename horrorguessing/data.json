@@ -12,6 +12,42 @@
 		"type":"song",
 		"description": "The hit Taylor Swift song! Long Live Tswizzle!",
 		"url":"vNoKguSdy4Y"
+	},
+	{
+		"title": "Don't Fear the Reaper",
+		"type":"song",
+		"description": "Blue Oyster Cult's hit song!",
+		"url":"cMYSWiPm7E0"
+	},
+	{
+		"title": "Psycho",
+		"type":"movie",
+		"description": "The classic horror move from the 60's!",
+		"url":"0WtDmbr9xyY"
+	},
+	{
+		"title": "The Silence of the Lambs",
+		"type":"movie",
+		"description": "It's on Netflix, go watch it, have nightmares.",
+		"url":"lQKs169Sl0I"
+	},
+	{
+		"title": "Monster",
+		"type":"song",
+		"description": "We don't know who's verse is best on this Kanye track. Actually, It's Nicki's.",
+		"url":"lQKs169Sl0I"
+	},
+	{
+		"title": "Where Are U Now",
+		"type":"song",
+		"description": "The Beibs and Skrillex made this. It's a thing.",
+		"url":"nntGTK2Fhb0"
+	},
+	{
+		"title": "Let Me In",
+		"type":"movie",
+		"description": "Vampires and midde school, I'm not sure which one is scarier.",
+		"url":"reRRAEVHq8E"
 	}
 	]
 }

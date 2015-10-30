@@ -7,7 +7,6 @@ app = Flask(__name__)
 
 data = [] # the json dictionary we will use for our data
 filepath = "./data.json" #directory of the json file 
-i=0 # the index to iterate over the array
 
 @app.route('/', methods = ['GET','POST'])
 def index():
